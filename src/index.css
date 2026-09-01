@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-orbitron: 'Orbitron', sans-serif;
+    --font-rajdhani: 'Rajdhani', sans-serif;
+    --font-space: 'Space Grotesk', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --bg-immersive: #05070a;
+  }
+
+  body {
+    font-family: var(--font-space);
+    background-color: #05070a;
+    color: #e2e8f0;
+    overflow-x: hidden;
+  }
+}
+
+.font-orbitron {
+  font-family: var(--font-orbitron);
+}
+
+.font-rajdhani {
+  font-family: var(--font-rajdhani);
+}
+
+.font-space {
+  font-family: var(--font-space);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Immersive UI Custom Glassmorphism & Cards */
+.neo-glass {
+  background: rgba(5, 9, 18, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(6, 182, 212, 0.15);
+}
+
+.neo-glass-card {
+  background: linear-gradient(135deg, rgba(8, 14, 28, 0.75) 0%, rgba(4, 7, 15, 0.85) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(34, 211, 238, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+}
+
+.neo-glow-cyan {
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.35), 0 0 50px rgba(6, 182, 212, 0.15);
+}
+
+.neo-glow-cyan-sm {
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.4);
+}
+
+.neo-glow-blue {
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.35), 0 0 60px rgba(37, 99, 235, 0.15);
+}
+
+.neo-glow-pulse {
+  animation: neoPulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes neoPulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.3), 0 0 40px rgba(6, 182, 212, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(6, 182, 212, 0.6), 0 0 70px rgba(6, 182, 212, 0.25);
+  }
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 12px rgba(34, 211, 238, 0.6), 0 0 24px rgba(6, 182, 212, 0.3);
+}
+
+.text-glow-white {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+/* Background Cyber Grid */
+.bg-cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(6, 182, 212, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(6, 182, 212, 0.03) 1px, transparent 1px);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(5, 7, 10, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(6, 182, 212, 0.25);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(6, 182, 212, 0.5);
+}
+
+/* Prism.js Syntax Highlighting for Sci-Fi / Immersive Cyber Theme */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #e2e8f0;
+  text-shadow: none;
+  font-family: var(--font-mono);
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.6;
+  tab-size: 2;
+  hyphens: none;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #64748b;
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: #94a3b8;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #38bdf8;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #22d3ee;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a5f3fc;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #67e8f9;
+  font-weight: 600;
+}
+
+.token.function,
+.token.class-name {
+  color: #7dd3fc;
+  font-weight: 500;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #facc15;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+

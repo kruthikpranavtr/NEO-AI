@@ -1,0 +1,6 @@
+{
+  "name": "NEO - Intelligent AI Assistant",
+  "description": "A futuristic AI assistant featuring the interactive NEO AI Core energy sphere, real-time voice, chat, history, and intelligent reasoning.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
